@@ -153,6 +153,31 @@ body{
   font-size:14px;
 }
 
+.qr-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-thumb {
+  width: 140px;
+  cursor: pointer;
+}
+
+.qr-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-modal img {
+  max-width: 90%;
+  max-height: 90%;
+}  
+
 @media(max-width:700px){
   .services,
   .contact-grid{
@@ -162,9 +187,19 @@ body{
 </style>
 </head>
 
+<script>
+function openQR() {
+  document.getElementById('qrModal').style.display = 'flex';
+}
+
+function closeQR() {
+  document.getElementById('qrModal').style.display = 'none';
+}
+</script>
+  
 <body>
 
-<div class="container">
+  <div class="container">
 
   <!-- TOPO -->
   <div class="header">
@@ -202,9 +237,17 @@ body{
     </div>
 
     <!-- QR CODE -->
-    <div class="qr">
-      <img src="qrcode-cartao-digital.png" alt="QR Code">
-      <p>Aponte a câmera para salvar o contato</p>
+    <div class="qr-container">
+      <img 
+        src="qrcode-cartao-digital.png" 
+        alt="QR Code Contato PapiJunior" 
+        class="qr-thumb"
+        onclick="openQR()"
+      >
+    </div>
+
+    <div id="qrModal" class="qr-modal" onclick="closeQR()">
+      <img src="qrcode-cartao-digital.png" class="qr-full">
     </div>
 
     <!-- BOTÕES -->
