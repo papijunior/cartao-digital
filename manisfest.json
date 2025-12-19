@@ -1,0 +1,20 @@
+{
+  "name": "PapiJunior LAB",
+  "short_name": "PapiJunior",
+  "start_url": "/cartao-digital/",
+  "display": "standalone",
+  "background_color": "#0b3c5d",
+  "theme_color": "#0b3c5d",
+  "icons": [
+    {
+      "src": "logoPorta.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logoPorta.jpg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
