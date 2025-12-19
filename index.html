@@ -163,6 +163,11 @@ body{
   cursor: pointer;
 }
 
+.qr-modal img {
+  max-width: 90%;
+  max-height: 90%;
+}  
+
 .qr-modal {
   display: none;
   position: fixed;
@@ -173,10 +178,20 @@ body{
   align-items: center;
 }
 
-.qr-modal img {
+.qr-full {
   max-width: 90%;
   max-height: 90%;
-}  
+}
+
+.qr-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+  
 
 @media(max-width:700px){
   .services,
@@ -188,14 +203,14 @@ body{
 </head>
 
 <script>
-function openQR() {
-  document.getElementById('qrModal').style.display = 'flex';
-}
+    function openQR() {
+      document.getElementById('qrModal').style.display = 'flex';
+    }
 
-function closeQR() {
-  document.getElementById('qrModal').style.display = 'none';
-}
-</script>
+    function closeQR() {
+      document.getElementById('qrModal').style.display = 'none';
+    }
+  </script>
   
 <body>
 
@@ -247,6 +262,7 @@ function closeQR() {
     </div>
 
     <div id="qrModal" class="qr-modal" onclick="closeQR()">
+      <span class="qr-close" onclick="closeQR()">✕</span>
       <img src="qrcode-cartao-digital.png" class="qr-full">
     </div>
 
