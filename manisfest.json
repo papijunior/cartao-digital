@@ -1,15 +1,18 @@
 {
   "name": "PapiJunior LAB",
   "short_name": "PapiJunior",
-  "start_url": "/cartao-digital/",
+  "description": "Cartão de Visitas Digital - PapiJunior LAB",
+  "start_url": "./index.html",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#0b3c5d",
   "theme_color": "#0b3c5d",
   "icons": [
     {
       "src": "logoPorta192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "logoPorta512.png",
