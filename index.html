@@ -22,12 +22,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="logoPorta192.png">
 
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0b3c63">
+  <meta name="theme-color" content="#d7e7f3">
 
   <style>
     :root {
       --azul: #0b3c63;
-      --azul-header: #5b8fb5;
+      --azul-header: #d7e7f3;
       --cinza: #f4f6f8;
       --texto: #333;
     }
@@ -48,41 +48,9 @@
 
     .header {
       background: var(--azul-header);
-      color: #fff;
-      padding: 18px 20px 28px;
-      position: relative;
-    }
-
-    .pj-btn {
-      position: absolute;
-      top: 18px;
-      left: 16px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      border: 0;
-      background: transparent;
-      cursor: pointer;
-      border-radius: 14px;
-      z-index: 1;
-    }
-
-    .pj-btn img {
-      width: 72px;
-      height: 72px;
-      display: block;
-      border-radius: 14px;
-      transition: transform 0.2s;
-    }
-
-    .pj-btn:active img {
-      transform: scale(0.95);
-    }
-
-    .header-copy {
+      color: var(--azul);
+      padding: 28px 20px 24px;
       text-align: center;
-      padding: 8px 80px 0;
     }
 
     .brand-logo-btn {
@@ -91,11 +59,11 @@
       border: 0;
       background: transparent;
       cursor: pointer;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
     }
 
     .brand-logo-btn img {
-      width: min(280px, 70vw);
+      width: min(320px, 82vw);
       height: auto;
       display: block;
       transition: transform 0.2s;
@@ -105,10 +73,11 @@
       transform: scale(0.97);
     }
 
-    .header-copy p {
+    .header p {
       font-style: italic;
       margin: 0;
-      opacity: 0.95;
+      color: var(--azul);
+      opacity: 0.9;
     }
 
     .section {
@@ -326,15 +295,6 @@
       .contact-grid {
         grid-template-columns: 1fr;
       }
-
-      .pj-btn img {
-        width: 60px;
-        height: 60px;
-      }
-
-      .header-copy {
-        padding: 4px 68px 0;
-      }
     }
   </style>
 </head>
@@ -344,15 +304,10 @@
   <div class="container">
 
     <div class="header">
-      <button type="button" class="pj-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir link do QR Code">
-        <img src="logoPorta192.png" alt="PJ">
+      <button type="button" class="brand-logo-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir QR Code PapiLAB">
+        <img src="papijunior-logo.png" alt="PapiLAB">
       </button>
-      <div class="header-copy">
-        <button type="button" class="brand-logo-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir QR Code PapiLAB">
-          <img src="papijunior-logo.png" alt="PapiLAB">
-        </button>
-        <p>Transformando ideias em sistemas</p>
-      </div>
+      <p>Transformando ideias em sistemas</p>
     </div>
 
     <div class="section">
