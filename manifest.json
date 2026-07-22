@@ -1,0 +1,31 @@
+{
+  "name": "PapiLAB Contato",
+  "short_name": "PapiLAB",
+  "description": "Cartão de Visitas Digital - PapiLAB",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b3c63",
+  "theme_color": "#0b3c63",
+  "icons": [
+    {
+      "src": "logoPorta192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logoPorta512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "logoPorta192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
