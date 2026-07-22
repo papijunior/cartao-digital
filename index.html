@@ -27,6 +27,7 @@
   <style>
     :root {
       --azul: #0b3c63;
+      --azul-header: #5b8fb5;
       --cinza: #f4f6f8;
       --texto: #333;
     }
@@ -46,19 +47,16 @@
     }
 
     .header {
-      background: var(--azul);
+      background: var(--azul-header);
       color: #fff;
       padding: 18px 20px 28px;
-    }
-
-    .header-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      position: relative;
     }
 
     .pj-btn {
+      position: absolute;
+      top: 18px;
+      left: 16px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -67,7 +65,7 @@
       background: transparent;
       cursor: pointer;
       border-radius: 14px;
-      flex-shrink: 0;
+      z-index: 1;
     }
 
     .pj-btn img {
@@ -82,27 +80,29 @@
       transform: scale(0.95);
     }
 
-    .brand-logo {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      min-width: 0;
-    }
-
-    .brand-logo img {
-      width: min(240px, 58vw);
-      height: auto;
-      display: block;
-    }
-
     .header-copy {
       text-align: center;
-      margin-top: 18px;
+      padding: 8px 80px 0;
     }
 
-    .header-copy h1 {
-      margin: 0 0 6px;
-      font-size: 26px;
+    .brand-logo-btn {
+      display: inline-flex;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      margin: 0 0 8px;
+    }
+
+    .brand-logo-btn img {
+      width: min(280px, 70vw);
+      height: auto;
+      display: block;
+      transition: transform 0.2s;
+    }
+
+    .brand-logo-btn:active img {
+      transform: scale(0.97);
     }
 
     .header-copy p {
@@ -332,8 +332,8 @@
         height: 60px;
       }
 
-      .header-copy h1 {
-        font-size: 22px;
+      .header-copy {
+        padding: 4px 68px 0;
       }
     }
   </style>
@@ -344,16 +344,13 @@
   <div class="container">
 
     <div class="header">
-      <div class="header-top">
-        <button type="button" class="pj-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir link do QR Code">
-          <img src="logoPorta192.png" alt="PJ">
-        </button>
-        <div class="brand-logo">
-          <img src="papijunior-logo.png" alt="PapiLAB">
-        </div>
-      </div>
+      <button type="button" class="pj-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir link do QR Code">
+        <img src="logoPorta192.png" alt="PJ">
+      </button>
       <div class="header-copy">
-        <h1>PapiLAB</h1>
+        <button type="button" class="brand-logo-btn" onclick="openQR()" title="Abrir link do QR Code" aria-label="Abrir QR Code PapiLAB">
+          <img src="papijunior-logo.png" alt="PapiLAB">
+        </button>
         <p>Transformando ideias em sistemas</p>
       </div>
     </div>
