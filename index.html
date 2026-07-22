@@ -283,11 +283,51 @@
     }
 
     .footer {
-      background: var(--azul);
-      color: #fff;
+      background: #eef5fb;
+      color: var(--azul);
       text-align: center;
-      padding: 15px;
+      padding: 18px 15px;
       font-size: 14px;
+    }
+
+    .footer-credit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 10px;
+      opacity: 0.85;
+      font-size: 0.85rem;
+    }
+
+    .footer-credit a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    .footer-credit a:hover {
+      opacity: 1;
+    }
+
+    .footer-credit img {
+      height: 22px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-site {
+      display: block;
+      margin-top: 8px;
+      color: var(--azul);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .footer-site:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 700px) {
@@ -381,6 +421,15 @@
 
     <div class="footer">
       © PapiLAB - Soluções em Tecnologia
+      <div class="footer-credit">
+        <span>por</span>
+        <a href="https://www.papijunior.com.br" target="_blank" rel="noopener noreferrer" title="PapiLAB">
+          <img src="papijunior-logo.png" alt="PapiLAB">
+        </a>
+      </div>
+      <a class="footer-site" href="https://www.papijunior.com.br" target="_blank" rel="noopener noreferrer">
+        www.papijunior.com.br
+      </a>
     </div>
 
   </div>

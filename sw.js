@@ -1,4 +1,4 @@
-const CACHE_NAME = 'papilab-contato-v2';
+const CACHE_NAME = 'papilab-contato-v3';
 const ASSETS = [
   './',
   './index.html',
